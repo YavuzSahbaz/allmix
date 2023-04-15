@@ -15,3 +15,7 @@ $ ./MultiFileDownload.sh
 Enter host URL: http://192.168.119.172:8080
 Enter file names (separated by space): PowerUp.ps1 PowerView.ps1 JuicyPotato.exe
 Enter destination directory: ./Downloads
+
+# Yscmd.php
+Php remote and local code execute lfi to rce. 
+yscmd.md explain how to use it. 
