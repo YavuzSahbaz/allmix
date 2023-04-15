@@ -1,4 +1,4 @@
-# PHP Remote Tool
+# PHP Remote AND Local Tool
 Author: Yavuz Sahbaz
 GitHub: https://github.com/YavuzSahbaz
 
