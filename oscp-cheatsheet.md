@@ -1204,6 +1204,11 @@ term.cmdloop()
 
 ---
 
+## gcc exploit complite, if have error gcc error, exploit compilet, Compiling Exploit Code 
+
+(/path/to/libc.so.6: version 'GLIBC_2.34' not found)
+use https://github.com/X0RW3LL/XenSpawn/blob/main/README.md
+
 ## external ressources
 
 ### cheatsheets
