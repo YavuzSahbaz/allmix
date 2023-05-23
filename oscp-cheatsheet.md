@@ -428,6 +428,12 @@ Connection: close
 - service: all
 - tactics: enumeration
 
+## If commands are limited, you break out of the "jail" shell?
+ ( linux shell limited, powershell limited, reverse shell limited.
+- `python -c 'import pty;pty.spawn("/bin/bash")'`
+- `echo os.system('/bin/bash')`
+- `/bin/sh -i`
+
 # filter search for specific kernel versions
 - `searchsploit privilege | grep -i linux | grep -i kernel | grep 2.6`
 
