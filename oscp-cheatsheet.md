@@ -428,7 +428,7 @@ Connection: close
 - service: all
 - tactics: enumeration
 
-## If commands are limited, you break out of the "jail" shell?
+## Full shell limited If commands are limited, you break out of the "jail" shell?
  ( linux shell limited, powershell limited, reverse shell limited.
 - `python -c 'import pty;pty.spawn("/bin/bash")'`
 - `echo os.system('/bin/bash')`
