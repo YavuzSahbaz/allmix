@@ -1213,6 +1213,28 @@ term.cmdloop()
 ## cat technique
 - `(cat exploit.txt; cat) | ./vulnapp`
 
+## port numbers and protocol names., port names, port list, ports names list.
+
+21: FTP (File Transfer Protocol)
+22: SSH (Secure Shell)
+23: Telnet
+25: SMTP (Simple Mail Transfer Protocol)
+53: DNS (Domain Name System)
+80: HTTP (Hypertext Transfer Protocol)
+110: POP3 (Post Office Protocol 3)
+143: IMAP (Internet Message Access Protocol)
+443: HTTPS (HTTP Secure)
+465: SMTPS (SMTP Secure)
+587: SMTP (Submission)
+993: IMAPS (IMAP Secure)
+995: POP3S (POP3 Secure)
+1194: OpenVPN
+1433: Microsoft SQL Server
+1521: Oracle database default listener
+3306: MySQL Database Server
+3389: RDP (Remote Desktop Protocol)
+5432: PostgreSQL database system
+5900: VNC (Virtual Network Computing)
 ---
 
 ## gcc exploit complite, if have error gcc error, exploit compilet, Compiling Exploit Code 
