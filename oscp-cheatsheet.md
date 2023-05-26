@@ -520,15 +520,17 @@ After the tunnel is up, you can comment out the first socks entry in proxychains
 - service: ssh
 - tactics: lateral_movement
 
-## pivot pivoting 
+## pivot pivoting , ssh pivoting, port forward
 - `sshuttle -vr <via-ssh-server> <Remote-Net-To-Route>`
 - `sshuttle -vr username@target-ip 10.1.1.0/24`
-
+``````````
 - `chisel server --port 8000 --reverse`
 - `.\chisel client 192.168.45.196:8000 R:socks`
-
+``````````````
 - `ssh root@192.168.45.196 -L 80:127.0.0.1:80`
 - `ssh -R 0.0.0.0:8000:192.168.196.1:80 root@192.168.45.196`
+- ssh -L 8044:127.0.0.1:8000 -i id_ecdsa -p 2222 anita@192.168.207.246 -N
+-N dont run any shell just do pivoting. -L local ports forward -R external ports another pc or endpoint. first port 8044 at attack machine can use it example at this point: if u run http://127.0.0.1:8044 it will run target machine`s 8000 ports. 
 ---
 
 # smbmap
