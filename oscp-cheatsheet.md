@@ -7,11 +7,18 @@
 ## enumerate services and use default scripts  
 - `nmap -sC -sV -p- --min-rate 10000 -oN normal.txt target-ip`
 
-## scan all tcp ports  
-- `nmap -p- -oN all_ports.txt target-ip`
+## nmap use, all port fast port scan, 
+first round
+$ sudo nmap -v -A [target]      # TCP default ports, OS detection, version detection, script scanning, and traceroute.
+$ sudo nmap -v -p- -sT [target] # TCP all ports (TCP connect)
+$ sudo nmap -v -p- -sS [target] # TCP all ports (TCP SYN only)
+$ sudo nmap -v -sU [target]     # UDP default ports.
 
-## scan all udp ports  
-- `nmap -p- -sU -oN all_udp_ports.txt target-ip`
+# force fast scan
+$ sudo nmap -v -p- -sS -T5 [target] # TCP all ports super fast
+
+# 2nd round of nmap scans
+$ sudo nmap -p[newly_discovered_port_1,2,3] -sV -A [target]
 
 ## use script categories  
 - `nmap --script vuln,safe,discovery -oN scan.txt target-ip`
