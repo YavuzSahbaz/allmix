@@ -192,6 +192,7 @@ for ip in $(seq 200 254); do echo 1.2.3.${ip}; done > target-ip.txt
 - `onesixtyone -c community.txt -i target-ip.txt`
 
 ---
+keepass2 , kdbx file 
 
 # rpcclient
 - service: rpc 
@@ -553,7 +554,7 @@ After the tunnel is up, you can comment out the first socks entry in proxychains
 - service: ssh
 - tactics: lateral_movement
 
-## pivot pivoting , ssh pivoting, port forward
+## pivot pivoting , ssh pivoting, port forward, chisel pivoting 
 - `sshuttle -vr <via-ssh-server> <Remote-Net-To-Route>`
 - `sshuttle -vr username@target-ip 10.1.1.0/24`
 ``````````
@@ -1245,6 +1246,8 @@ term.cmdloop()
 # interactive shells 
 ## cat technique
 - `(cat exploit.txt; cat) | ./vulnapp`
+
+
 
 ## port numbers and protocol names., port names, port list, ports names list.
 
